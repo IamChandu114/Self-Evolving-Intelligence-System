@@ -1,0 +1,6 @@
+streamlit
+requests
+fastapi
+uvicorn
+pandas
+plotly
