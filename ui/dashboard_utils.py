@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import ast
 import re
-from datetime import datetime
 from pathlib import Path
 
 import pandas as pd
@@ -12,16 +11,6 @@ def parse_input_signal(raw_text: str) -> list[int]:
     tokens = re.split(r"[,\s]+", raw_text.strip())
     values = [int(token) for token in tokens if token]
     return values
-
-
-def format_timestamp(value) -> str:
-    if not value:
-        return "-"
-    if isinstance(value, str):
-        return value
-    if isinstance(value, datetime):
-        return value.strftime("%H:%M:%S")
-    return str(value)
 
 
 def experiences_to_frame(experiences) -> pd.DataFrame:
@@ -35,17 +24,8 @@ def experiences_to_frame(experiences) -> pd.DataFrame:
                 "confidence",
                 "strategy_weight",
             ]
-        )
+    )
     return pd.DataFrame(experiences)
-
-
-def safe_mean(values):
-    values = list(values)
-    return sum(values) / len(values) if values else 0.0
-
-
-def clamp(value, lower, upper):
-    return max(lower, min(upper, value))
 
 
 def count_python_symbols(root_path: Path):

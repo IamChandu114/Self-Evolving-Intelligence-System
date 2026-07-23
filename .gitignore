@@ -23,7 +23,7 @@ storage/*.sqlite
 htmlcov/
 
 # Streamlit
-.streamlit/
+.streamlit/secrets.toml
 
 # IDEs
 .vscode/
