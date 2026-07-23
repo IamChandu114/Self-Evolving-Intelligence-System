@@ -388,8 +388,8 @@ No license file is currently included in this repository.
 ## Author
 
 - GitHub: [IamChandu114](https://github.com/IamChandu114)
-- LinkedIn: `<your-linkedin-url>`
-- Email: `<your-email@example.com>`
+- LinkedIn: linkedin.com/in/pace1304/
+- Email: `ca4443700@gmail.com`
 
 ---
 
